@@ -1,0 +1,8 @@
+# BASE: required to start
+# start with ```pip3 install -r requirements.txt```
+
+GitPython
+matplotlib
+numpy
+networkx
+beautifulsoup4

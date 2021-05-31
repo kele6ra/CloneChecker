@@ -6,17 +6,23 @@ import glob
 import shutil
 import csv
 import re
+import configparser
 
 import networkx as nx
 
 from bs4 import BeautifulSoup
+from concurrent import futures
 
 import sys
-sys.setrecursionlimit(10000)
 
-DOWNLOAD_DATA = False
-LIMIT = 0.5
-BUNDLE_FILENAME = 'clonecheckbundle.cc'
+config = configparser.ConfigParser()
+config.read('config.cfg')
+
+sys.setrecursionlimit(config.getint('Settings','recursion_limit'))
+
+DOWNLOAD_DATA = config.getboolean('Settings','download_data')
+LIMIT = config.getfloat('Settings','limit')
+BUNDLE_FILENAME = config.get('Settings','bundle_filename')
 
 from pathlib import Path
 
@@ -143,6 +149,19 @@ class UserTask:
     return regexp.search(text)
     #return self.getText().find(value) != -1
 
+class TaskHandler:
+    def __init__(self, length):
+        self.usersTasks = {}
+        self.iterator = 0
+        self.length = length
+
+    def __call__(self, r):
+        self.iterator+=1
+        print(f'Downloaded: {self.iterator}/{self.length}')
+        if r.result().success:
+          self.usersTasks[r.result().userName] = r.result()
+          print(f'Success for {r.result().userName}')
+
 class UserList:
   def __init__(self, users, taskName, localPath, checkPath):
     self.taskName = taskName
@@ -159,14 +178,12 @@ class UserList:
         del self.usersTasks[user]
 
   def _createUserTasks(self, users):
-    i = 0
-    for user in users:
-      task = UserTask(user, self.taskName, self.localPath, self.checkPath)
-      print(f'Downloaded: {i + 1}/{len(users)}')
-      i += 1
-      if task.success:
-        self.usersTasks[user] = task
-        print('Success')
+    tasks_handler = TaskHandler(len(users))
+    with futures.ProcessPoolExecutor() as pool:
+      for user in users:
+        future_result = pool.submit(UserTask, user, self.taskName, self.localPath, self.checkPath)
+        future_result.add_done_callback(tasks_handler)
+    self.usersTasks = tasks_handler.usersTasks
   
   def compare(self, userNameA, userNameB):
     userA = self.usersTasks[userNameA]
@@ -311,9 +328,10 @@ class UserList:
 
 if __name__ == "__main__":
   users = []
-  
-  for i in range(1, 18):
-    users += parseScores(os.path.join('.', 'scores', f'{i}.html'))
+
+  for file in os.listdir("./scores"):
+    if file.endswith(".html"):
+      users += parseScores(os.path.join('.', 'scores', file))
 
   '''os.path.join('src', 'carbon-dating.js'),
     os.path.join('src', 'count-cats.js'),
@@ -327,7 +345,7 @@ if __name__ == "__main__":
 
   #newUserList = concat_files('data/sovaz1997/basic-js/src', '*.js')
   
-  userList = UserList(users, 'singolo', os.path.join('data'), 'index.html')
+  userList = UserList(users, config.get('Settings','task_name'), os.path.join('data'), config.get('Settings','entery_point'))
   #userList.checkByValue(r'new Function')
 
   #userList.updateUserList(userList.checkByValue(r'new Function'))

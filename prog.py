@@ -53,11 +53,20 @@ def concatenateAll(path, userList, taskName, pattern):
   for user in userList:
     currentPath = os.path.join(path, user, taskName)
     nodeModules = os.path.join(currentPath, 'node_modules')
+    docDir = os.path.join(currentPath, 'doc')
+    testDir = os.path.join(currentPath, 'test')
     
     if os.path.exists(nodeModules):
       shutil.rmtree(nodeModules)
 
+    if os.path.exists(docDir):
+      shutil.rmtree(docDir)
+
+    if os.path.exists(testDir):
+      shutil.rmtree(testDir)
+
     if os.path.exists(currentPath):
+      print(f'current path = {currentPath}')
       text = concat_files(currentPath, pattern)
       if len(text) > 0:
         newUserList.append(user)
@@ -345,9 +354,10 @@ if __name__ == "__main__":
 
   #newUserList = concat_files('data/sovaz1997/basic-js/src', '*.js')
   
-  userList = UserList(users, config.get('Settings','task_name'), os.path.join('data'), config.get('Settings','entery_point'))
+  userList = UserList(users, config.get('Settings','task_name'), os.path.join('data'), config.get('Settings','bundle_filename'))
   #userList.checkByValue(r'new Function')
-
+  users = concatenateAll('data', users, config.get('Settings','task_name'), config.get('Settings','concat_pattern'))
+  userList.updateUserList(users)
   #userList.updateUserList(userList.checkByValue(r'new Function'))
   userList.crossCheck()
   
@@ -355,5 +365,3 @@ if __name__ == "__main__":
   #svgReplace('expression-calculator.svg', links)
 
 
-  #users = concatenateAll('virtual-keyboard', users, 'virtual-keyboard', '*.js')
-  #userList.updateUserList(users)

@@ -10,10 +10,11 @@ Download html paged with students score to `scores` page.
 Parameters can be set in `config.cfg` file:
  - download_data (true/false) - clone student's repo to `data` direcory or check remotely
  - limit (0-0.99) - percent of unique check
- - bundle_filename (string) - bundle name for python binary
+ - bundle_filename (string) - bundle name for cancatanated files
  - recursion_limit (integer) - limit of max recursion steps
  - task_name (string) - name of task repository
- - entery point (string) - entery point file or directory name
+ - compare_file (string) - compare file name (bundle_filename for concatanated files)
+ - concat_pattern (string) - pattern for file concatanation
 
 Run ```python prog.py``` to start application.
 

@@ -7,6 +7,9 @@ Install Python Requirements:
 
 Download html paged with students score to `scores` page.
 
+If you want to work with PRs you should use github token,
+rename token.cfg.example to token.cfg and add token to it.
+
 Parameters can be set in `config.cfg` file:
  - download_data (true/false) - clone student's repo to `data` direcory or check remotely
  - limit (0-0.99) - percent of unique check

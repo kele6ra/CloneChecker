@@ -76,7 +76,6 @@ def concatenateAll(path, repos, taskName, pattern):
       shutil.rmtree(testDir)
 
     if os.path.exists(currentPath):
-      print(f'current path = {currentPath}')
       text = concat_files(currentPath, pattern)
       if len(text) > 0:
         userList.append(user)
@@ -209,6 +208,8 @@ class UserTask:
 
     if not os.listdir(self.downloadPath):
       try:
+        if len(GITHUB_TOKEN) > 1:
+          self.taskRepo['repo'] = self.taskRepo['repo'].replace('github.com', GITHUB_TOKEN + ':x-oauth-basic@github.com')
         git.Repo.clone_from(self.taskRepo['repo'], self.downloadPath, branch=self.taskRepo['branch'])
       except git.exc.GitError:
         return False

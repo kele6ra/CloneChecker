@@ -24,7 +24,7 @@ config = configparser.ConfigParser()
 config.read('config.cfg')
 
 token = configparser.ConfigParser()
-config.read('token.cfg')
+token.read('token.cfg')
 
 GITHUB_TOKEN = token.get('Token', 'github_token')
 
@@ -103,38 +103,57 @@ def get_jaccard_sim(a, b):
 
     return float(len(c)) / (len(a) + len(b) - len(c))
 
-def getDataFromPR(pr_repos):
-  repos = {}
-  for user in pr_repos:
-    if pr_repos[user]['repo'].find('github.com') != -1:
-      if '/pull/' in pr_repos[user]['repo']:
-        api_link = pr_repos[user]['repo'].replace('github.com', 'api.github.com/repos')
+class ParseRepos:
+  def __init__(self, user, repo):
+    self.userName = user
+    self.repo = repo
+
+    self.success = self._parseRepos()
+
+  def _parseRepos(self):
+    if self.repo['repo'].find('github.com') != -1:
+      if '/pull/' in self.repo['repo']:
+        api_link = self.repo['repo'].replace('github.com', 'api.github.com/repos')
         api_link = api_link.replace('/pull/', '/pulls/')
         commits_str = api_link.find('/commits/')
 
         if commits_str != -1:
           api_link = api_link[:commits_str]
-          print(api_link)
 
         try:
           request = Request(api_link)
           request.add_header('Authorization', 'token %s' % GITHUB_TOKEN)
           with urlopen(request) as url:  
             data = json.loads(url.read().decode())
-            pr_repos[user]['repo'] = data['head']['repo']['html_url']
-            pr_repos[user]['branch'] = data['head']['ref']
+            self.repo['repo'] = data['head']['repo']['html_url']
+            self.repo['branch'] = data['head']['ref']
         except:
-          print ('Could not find', pr_repos[user]['repo'])
-          continue
+          print ('Could not find ', self.userName, '\'s repo')
+          return False
+      return self.isSuccess()
+    else:
+      return False  
 
-      repos[user] = pr_repos[user]
+  def isSuccess(self):
+    return self.repo
 
-  return repos
+class ParseRepoHandler:
+  def __init__(self, length):
+    self.userTaskRepos = {}
+    self.iterator = 0
+    self.length = length
 
-def parseRepos(path, file_type):
+  def __call__(self, r):
+    self.iterator+=1
+    print(f'Parsed: {self.iterator}/{self.length}')
+    if r.result().success:
+      self.userTaskRepos[r.result().userName] = r.result().repo
+
+def getUserTaskRepos(path, file_type):
   if file_type == 0:
     with open(path) as json_file:
       return json.load(json_file)
+  
   elif file_type == 1:
     users = set()
     pageText = open(path, 'r').read()
@@ -147,10 +166,18 @@ def parseRepos(path, file_type):
     return users
 
   elif file_type == 2:
+    repos = {}
     with open(path) as csv_file:
       reader = csv.reader(csv_file, delimiter=';')
       repos = {row[1]: {'repo': row[0], 'branch': 'master'} for row in reader}
-      return getDataFromPR(repos)
+
+    repoHandler = ParseRepoHandler(len(repos))
+    with futures.ProcessPoolExecutor() as pool:
+      for user in repos:
+        futureResult = pool.submit(ParseRepos, user, repos[user])
+        futureResult.add_done_callback(repoHandler)
+
+    return repoHandler.userTaskRepos
 
   else:
     return {}  
@@ -207,17 +234,17 @@ class UserTask:
     # return self.getText().find(value) != -1
 
 class TaskHandler:
-    def __init__(self, length):
-        self.usersTasks = {}
-        self.iterator = 0
-        self.length = length
+  def __init__(self, length):
+      self.usersTasks = {}
+      self.iterator = 0
+      self.length = length
 
-    def __call__(self, r):
-        self.iterator+=1
-        print(f'Downloaded: {self.iterator}/{self.length}')
-        if r.result().success:
-          self.usersTasks[r.result().userName] = r.result()
-          print(f'Success for {r.result().userName}')
+  def __call__(self, r):
+      self.iterator+=1
+      print(f'Downloaded: {self.iterator}/{self.length}')
+      if r.result().success:
+        self.usersTasks[r.result().userName] = r.result()
+        print(f'Success for {r.result().userName}')
 
 class UserList:
   def __init__(self, repos, taskName, localPath, checkPath):
@@ -389,16 +416,16 @@ if __name__ == "__main__":
     users = []
     for file in os.listdir("./scores"):
       if file.endswith(".html"):
-        users += parseRepos(os.path.join(SCRIPT_PATH, 'scores', file), 1)
+        users += getUserTaskRepos(os.path.join(SCRIPT_PATH, 'scores', file), 1)
     repos = {key: {'repo': f'https://github.com/{key}/{TASK_NAME}', 'branch': 'master'}  for key in users}
   elif COMPARE_FILENAME.endswith(".csv"):
-    repos = parseRepos(os.path.join(SCRIPT_PATH, 'scores', COMPARE_FILENAME), 2)
+    repos = getUserTaskRepos(os.path.join(SCRIPT_PATH, 'scores', COMPARE_FILENAME), 2)
   elif COMPARE_FILENAME.endswith(".json"):
-    repos = parseRepos(os.path.join(SCRIPT_PATH, 'scores', COMPARE_FILENAME), 0)
+    repos = getUserTaskRepos(os.path.join(SCRIPT_PATH, 'scores', COMPARE_FILENAME), 0)
 
   # newUserList = concat_files('data/sovaz1997/basic-js/src', '*.js')
-  
   userList = UserList(repos, TASK_NAME, os.path.join('data'), BUNDLE_FILENAME)
+
   # userList.checkByValue(r'new Function')
   tasks = concatenateAll('data', repos, TASK_NAME, CONCAT_PATTERN)
   userList.updateUserList(repos)

@@ -7,6 +7,11 @@ import shutil
 import csv
 import re
 import configparser
+import csv
+import pathlib
+import json
+from urllib.request import urlopen, Request
+from pathlib import Path
 
 import networkx as nx
 
@@ -18,19 +23,24 @@ import sys
 config = configparser.ConfigParser()
 config.read('config.cfg')
 
-sys.setrecursionlimit(config.getint('Settings','recursion_limit'))
+token = configparser.ConfigParser()
+config.read('token.cfg')
 
-DOWNLOAD_DATA = config.getboolean('Settings','download_data')
-LIMIT = config.getfloat('Settings','limit')
-BUNDLE_FILENAME = config.get('Settings','bundle_filename')
+GITHUB_TOKEN = token.get('Token', 'github_token')
 
-from pathlib import Path
+sys.setrecursionlimit(config.getint('Settings', 'recursion_limit'))
 
+SCRIPT_PATH = pathlib.Path(__file__).parent.absolute()
+COMPARE_FILENAME = config.get('Settings', 'compare_file')
+DOWNLOAD_DATA = config.getboolean('Settings', 'download_data')
+LIMIT = config.getfloat('Settings', 'limit')
+BUNDLE_FILENAME = config.get('Settings', 'bundle_filename')
+TASK_NAME = config.get('Settings', 'task_name')
+CONCAT_PATTERN = config.get('Settings','concat_pattern')
 
 def svgReplace(filename, links):
   with open(filename, 'r') as file:
     filedata = file.read()
-
 
   for user in links:
     filedata = filedata.replace(f'>{user}<', f'>{links[user]}<')
@@ -48,9 +58,9 @@ def concat_files(dir_path, file_pattern):
           res += infile.read()
     return res
 
-def concatenateAll(path, userList, taskName, pattern):
-  newUserList = []
-  for user in userList:
+def concatenateAll(path, repos, taskName, pattern):
+  userList = []
+  for user in repos:
     currentPath = os.path.join(path, user, taskName)
     nodeModules = os.path.join(currentPath, 'node_modules')
     docDir = os.path.join(currentPath, 'doc')
@@ -69,11 +79,10 @@ def concatenateAll(path, userList, taskName, pattern):
       print(f'current path = {currentPath}')
       text = concat_files(currentPath, pattern)
       if len(text) > 0:
-        newUserList.append(user)
+        userList.append(user)
         with open(os.path.join(currentPath, BUNDLE_FILENAME), 'w', encoding='utf-8') as f:
           f.write(text)
-  return newUserList
-
+  return userList
 
 def detectComponents(graph, key, detected):
   for v in graph[key]:
@@ -85,6 +94,7 @@ def detectComponents(graph, key, detected):
 def getPercent(value):
   return f'{value * 100}%'
 
+
 def get_jaccard_sim(a, b):
     c = a.intersection(b)
 
@@ -93,35 +103,74 @@ def get_jaccard_sim(a, b):
 
     return float(len(c)) / (len(a) + len(b) - len(c))
 
+def getDataFromPR(pr_repos):
+  repos = {}
+  for user in pr_repos:
+    if pr_repos[user]['repo'].find('github.com') != -1:
+      if '/pull/' in pr_repos[user]['repo']:
+        api_link = pr_repos[user]['repo'].replace('github.com', 'api.github.com/repos')
+        api_link = api_link.replace('/pull/', '/pulls/')
+        commits_str = api_link.find('/commits/')
 
-def parseScores(path):
-  pageText = open(path, 'r').read()
-  page = BeautifulSoup(pageText, 'html.parser')
-  
-  users = set()
+        if commits_str != -1:
+          api_link = api_link[:commits_str]
+          print(api_link)
 
-  for user in page.find_all('tr'):
-    if user.has_attr('data-row-key'):
-      users.add(user.get('data-row-key'))
+        try:
+          request = Request(api_link)
+          request.add_header('Authorization', 'token %s' % GITHUB_TOKEN)
+          with urlopen(request) as url:  
+            data = json.loads(url.read().decode())
+            pr_repos[user]['repo'] = data['head']['repo']['html_url']
+            pr_repos[user]['branch'] = data['head']['ref']
+        except:
+          print ('Could not find', pr_repos[user]['repo'])
+          continue
 
-  return list(users)
+      repos[user] = pr_repos[user]
+
+  return repos
+
+def parseRepos(path, file_type):
+  if file_type == 0:
+    with open(path) as json_file:
+      return json.load(json_file)
+  elif file_type == 1:
+    users = set()
+    pageText = open(path, 'r').read()
+    page = BeautifulSoup(pageText, 'html.parser')
+
+    for user in page.find_all('tr'):
+      if user.has_attr('data-row-key'):
+        users.add(user.get('data-row-key'))
+
+    return users
+
+  elif file_type == 2:
+    with open(path) as csv_file:
+      reader = csv.reader(csv_file, delimiter=';')
+      repos = {row[1]: {'repo': row[0], 'branch': 'master'} for row in reader}
+      return getDataFromPR(repos)
+
+  else:
+    return {}  
 
 class UserTask:
-  def __init__(self, userName, taskName, localPath, checkPath):
+  def __init__(self, userName, taskRepo, taskName, localPath, checkPath):
     self.userName = userName
     self.taskName = taskName
-    self.localPath = localPath
+    self.taskRepo = taskRepo
     self.checkPath = checkPath
+    self.localPath = localPath
     self.cash = None
 
     self.success = self._cloneProject()
 
   def _cloneProject(self):
-    self.downloadPath = os.path.join(self.localPath, self.userName)
-    self.pathToFile = os.path.join(self.downloadPath, self.taskName, self.checkPath)
+    self.downloadPath = os.path.join(self.localPath, self.userName, self.taskName)
+    self.pathToFile = os.path.join(self.downloadPath, self.checkPath)
 
-    self.gitUrl = f'https://github.com/{self.userName}/{self.taskName}'
-    self.urlToFile = f'{self.gitUrl}/blob/master/{self.checkPath}'
+    self.urlToFile = f'{self.taskRepo["repo"]}/blob/{self.taskRepo["branch"]}/{self.checkPath}'
 
     if not DOWNLOAD_DATA:
       return self.isSuccess()
@@ -133,7 +182,7 @@ class UserTask:
 
     if not os.listdir(self.downloadPath):
       try:
-        git.Git(self.downloadPath).clone(self.gitUrl)
+        git.Repo.clone_from(self.taskRepo['repo'], self.downloadPath, branch=self.taskRepo['branch'])
       except git.exc.GitError:
         return False
 
@@ -146,7 +195,6 @@ class UserTask:
     if self.cash:
       return self.cash
     
-
     with open (self.pathToFile, "r", encoding='utf-8', errors='ignore') as f:
       self.cash = f.read()
       return self.cash
@@ -156,7 +204,7 @@ class UserTask:
 
     regexp = re.compile(value)
     return regexp.search(text)
-    #return self.getText().find(value) != -1
+    # return self.getText().find(value) != -1
 
 class TaskHandler:
     def __init__(self, length):
@@ -172,27 +220,27 @@ class TaskHandler:
           print(f'Success for {r.result().userName}')
 
 class UserList:
-  def __init__(self, users, taskName, localPath, checkPath):
-    self.taskName = taskName
+  def __init__(self, repos, taskName, localPath, checkPath):
     self.localPath = localPath
     self.checkPath = checkPath
+    self.taskName = taskName
     self.usersTasks = {}
     self.setCash = dict()
     
-    self._createUserTasks(users)
+    self._createUserTasks(repos)
 
-  def updateUserList(self, userList):
+  def updateUserList(self, repos):
     for user in list(self.usersTasks):
-      if not user in userList:
+      if not user in repos:
         del self.usersTasks[user]
 
-  def _createUserTasks(self, users):
-    tasks_handler = TaskHandler(len(users))
+  def _createUserTasks(self, repos):
+    tasksHandler = TaskHandler(len(repos))
     with futures.ProcessPoolExecutor() as pool:
-      for user in users:
-        future_result = pool.submit(UserTask, user, self.taskName, self.localPath, self.checkPath)
-        future_result.add_done_callback(tasks_handler)
-    self.usersTasks = tasks_handler.usersTasks
+      for user in repos:
+        futureResult = pool.submit(UserTask, user, repos[user], self.taskName, self.localPath, self.checkPath)
+        futureResult.add_done_callback(tasksHandler)
+    self.usersTasks = tasksHandler.usersTasks
   
   def compare(self, userNameA, userNameB):
     userA = self.usersTasks[userNameA]
@@ -233,8 +281,6 @@ class UserList:
           res.append(user)
           f.writelines([f'User: {user}\n\n', self.usersTasks[user].getText()])
           f.write('\n\n\n------------------------------------------------------\n\n\n')
-    
-
 
     return res
 
@@ -336,32 +382,30 @@ class UserList:
     return hist
 
 if __name__ == "__main__":
-  users = []
+  repos = {}
+  tasks = []
 
-  for file in os.listdir("./scores"):
-    if file.endswith(".html"):
-      users += parseScores(os.path.join('.', 'scores', file))
+  if COMPARE_FILENAME.endswith(".html"):
+    users = []
+    for file in os.listdir("./scores"):
+      if file.endswith(".html"):
+        users += parseRepos(os.path.join(SCRIPT_PATH, 'scores', file), 1)
+    repos = {key: {'repo': f'https://github.com/{key}/{TASK_NAME}', 'branch': 'master'}  for key in users}
+  elif COMPARE_FILENAME.endswith(".csv"):
+    repos = parseRepos(os.path.join(SCRIPT_PATH, 'scores', COMPARE_FILENAME), 2)
+  elif COMPARE_FILENAME.endswith(".json"):
+    repos = parseRepos(os.path.join(SCRIPT_PATH, 'scores', COMPARE_FILENAME), 0)
 
-  '''os.path.join('src', 'carbon-dating.js'),
-    os.path.join('src', 'count-cats.js'),
-    os.path.join('src', 'dream-team.js'),
-    os.path.join('src', 'extended-repeater.js'),
-    os.path.join('src', 'hanoi-tower.js'),
-    os.path.join('src', 'recursive-depth.js'),
-    os.path.join('src', 'transform-array.js'),
-    os.path.join('src', 'vigenere-cipher.js'),
-    os.path.join('src', 'what-season.js')'''
-
-  #newUserList = concat_files('data/sovaz1997/basic-js/src', '*.js')
+  # newUserList = concat_files('data/sovaz1997/basic-js/src', '*.js')
   
-  userList = UserList(users, config.get('Settings','task_name'), os.path.join('data'), config.get('Settings','bundle_filename'))
-  #userList.checkByValue(r'new Function')
-  users = concatenateAll('data', users, config.get('Settings','task_name'), config.get('Settings','concat_pattern'))
-  userList.updateUserList(users)
-  #userList.updateUserList(userList.checkByValue(r'new Function'))
+  userList = UserList(repos, TASK_NAME, os.path.join('data'), BUNDLE_FILENAME)
+  # userList.checkByValue(r'new Function')
+  tasks = concatenateAll('data', repos, TASK_NAME, CONCAT_PATTERN)
+  userList.updateUserList(repos)
+  # userList.updateUserList(userList.checkByValue(r'new Function'))
   userList.crossCheck()
   
-  #links = userList.getLinks()
-  #svgReplace('expression-calculator.svg', links)
+  # links = userList.getLinks()
+  # svgReplace('expression-calculator.svg', links)
 
 

@@ -1,0 +1,1497 @@
+{
+    "1verapoles":
+    {
+        "repo": "https://github.com/1verapoles/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli"
+    },
+    "3igrik":
+    {
+        "repo": "https://github.com/3igrik/rsschool-nodejs",
+        "branch": "task1/CLI-tool"
+    },
+    "5975471":
+    {
+        "repo": "https://github.com/5975471/rss-caesar-cli",
+        "branch": "cli"
+    },
+    "803142":
+    {
+        "repo": "https://github.com/803142/nodejs-task1",
+        "branch": "task1-caesar"
+    },
+    "96tm":
+    {
+        "repo": "https://github.com/96tm/nodejs-course",
+        "branch": "task-1-caesar-cipher-cli-tool"
+    },
+    "abulynka":
+    {
+        "repo": "https://github.com/abulynka/basic-nodejs-2021Q2",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "aitzhans":
+    {
+        "repo": "https://github.com/aitzhans/caesar_cipher_cli",
+        "branch": "develop"
+    },
+    "akool":
+    {
+        "repo": "https://github.com/akool/basic-nodejs",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "akulaualiaksei":
+    {
+        "repo": "https://github.com/akulaualiaksei/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "akurlovich":
+    {
+        "repo": "https://github.com/akurlovich/basic_node_JS",
+        "branch": "caesar_cli_app"
+    },
+    "albertthewinner2000":
+    {
+        "repo": "https://github.com/albertthewinner2000/Ceaser-ciper-CLI",
+        "branch": "dev"
+    },
+    "aleksandrkalinin":
+    {
+        "repo": "https://github.com/AleksandrKalinin/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "aleksandr-sass":
+    {
+        "repo": "https://github.com/aleksandr-sass/MyCaesarCLI",
+        "branch": "My_Caesar_CLI"
+    },
+    "aleksandrsen":
+    {
+        "repo": "https://github.com/aleksandrsen/RS_School",
+        "branch": "master"
+    },
+    "alekseishkel":
+    {
+        "repo": "https://github.com/alekseishkel/node-js",
+        "branch": "1-task/caesar-cli"
+    },
+    "aleksey34":
+    {
+        "repo": "https://github.com/aleksey34/rss-node-testing/tree/test1-caesar",
+        "branch": "master"
+    },
+    "alekseyvy":
+    {
+        "repo": "https://github.com/AlekseyVY/RSS-NodeJS_2021",
+        "branch": "caesar_cipher_CLI_tool"
+    },
+    "alesyakuptsova":
+    {
+        "repo": "https://github.com/AlesyaKuptsova/nodejs-task1",
+        "branch": "caesar-cipher"
+    },
+    "alexeyfl":
+    {
+        "repo": "https://github.com/AlexeyFL/caesar-cipher-CLI-tool",
+        "branch": "caesar-cipher"
+    },
+    "alexeygorbachevskiy":
+    {
+        "repo": "https://github.com/AlexeyGorbachevskiy/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "alexlatypov94":
+    {
+        "repo": "https://github.com/alexlatypov94/Caesar-cipher-CLI-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "alexsch1":
+    {
+        "repo": "https://github.com/AlexSch1/caesar-cipher-cli-tool",
+        "branch": "task-1-caesar-cipher-cli-tool"
+    },
+    "alex-s-nik":
+    {
+        "repo": "https://github.com/alex-s-nik/caesar-cipher",
+        "branch": "caesar-cipher"
+    },
+    "alpoliakov":
+    {
+        "repo": "https://github.com/alpoliakov/caesar-cipher-cli-tool",
+        "branch": "develop"
+    },
+    "anastasiafedotova":
+    {
+        "repo": "https://github.com/AnastasiaFedotova/NODEJS2021Q2",
+        "branch": "caesarCipherCLItool"
+    },
+    "anastasia-v-m":
+    {
+        "repo": "https://github.com/anastasia-v-m/first",
+        "branch": "task"
+    },
+    "anastasiya-s":
+    {
+        "repo": "https://github.com/Anastasiya-s/nodejs2021",
+        "branch": "caesar-cipher"
+    },
+    "andevrom":
+    {
+        "repo": "https://github.com/anDevRom/cipher-cli",
+        "branch": "task-1/caesar-cipher"
+    },
+    "andrei-roh":
+    {
+        "repo": "https://github.com/andrei-roh/caesar-cipher-cli-tool",
+        "branch": "develop"
+    },
+    "andrew193":
+    {
+        "repo": "https://github.com/Andrew193/Task-1.-Caesar-cipher-CLI-tool",
+        "branch": "develop"
+    },
+    "andrewmurashko":
+    {
+        "repo": "https://github.com/Andrewmurashko/NodeJS-RS-School",
+        "branch": "Task1-Caesar-cipher-CLI-tool"
+    },
+    "andreyamelchenia":
+    {
+        "repo": "https://github.com/AndreyAmelchenia/nodejs_2021",
+        "branch": "caesar"
+    },
+    "andreygp5":
+    {
+        "repo": "https://github.com/andreygp5/node-js-course",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "andreyned":
+    {
+        "repo": "https://github.com/AndreyNed/nodejs-course",
+        "branch": "task1-caesar-cipher-cli"
+    },
+    "angietune":
+    {
+        "repo": "https://github.com/angietune/Caezar",
+        "branch": "Caezar"
+    },
+    "anika3160":
+    {
+        "repo": "https://github.com/anika3160/task-1-caesar-cipher-cli",
+        "branch": "task1"
+    },
+    "anival-github":
+    {
+        "repo": "https://github.com/anival-github/NodeJS-course-private",
+        "branch": "Caesar-cipher-CLI-tool"
+    },
+    "annadavydenko":
+    {
+        "repo": "https://github.com/AnnaDavydenko/Caesar-cipher-CLI-tool",
+        "branch": "develop"
+    },
+    "annia-anya":
+    {
+        "repo": "https://github.com/annia-anya/Caesar-cipher-CLI-tool",
+        "branch": "master"
+    },
+    "annrudenko":
+    {
+        "repo": "https://github.com/annrudenko/nodejs-2021Q2-task1",
+        "branch": "solution"
+    },
+    "anntol":
+    {
+        "repo": "https://github.com/Anntol/nodejs2021Q2",
+        "branch": "caesar-cli"
+    },
+    "ansivgit":
+    {
+        "repo": "https://github.com/ansivgit/Caesar-cipher-CLI-tool",
+        "branch": "develop"
+    },
+    "antonpanza":
+    {
+        "repo": "https://github.com/antonpanza/caesars-cipher",
+        "branch": "master"
+    },
+    "anzhelaabitova":
+    {
+        "repo": "https://github.com/anzhelaAbitova/caesar-cipher-CLI-tool",
+        "branch": "main"
+    },
+    "arseniyxaoc":
+    {
+        "repo": "https://github.com/ArseniyXaoc/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "artem-bazykin-ddi":
+    {
+        "repo": "https://github.com/artem-bazykin-ddi/Caesar-cipher-CLI-tool",
+        "branch": "dev"
+    },
+    "arumirinka":
+    {
+        "repo": "https://github.com/arumirinka/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "ashablyka":
+    {
+        "repo": "https://github.com/ashablyka/Caesar-cipher-CLI-tool",
+        "branch": "Caesar-cipher-CLI-tool"
+    },
+    "asigithub":
+    {
+        "repo": "https://github.com/asigithub/caesar-cipher-cli-tool",
+        "branch": "dev"
+    },
+    "av-shell":
+    {
+        "repo": "https://github.com/AV-Shell/Caesar_cipher_CLI_tool_2021q2",
+        "branch": "develop"
+    },
+    "ayaki-coder":
+    {
+        "repo": "https://github.com/AYaki-coder/Caesar-cipher2021Q2",
+        "branch": "develop"
+    },
+    "b3funky":
+    {
+        "repo": "https://github.com/B3Funky/RSS-NodeJS-2021-Q2",
+        "branch": "task-1-caesar-cipher-cli-tool"
+    },
+    "bazloo":
+    {
+        "repo": "https://github.com/bazloo/Caesar-cipher-CLI-tool",
+        "branch": "Caesar-cipher-CLI-tool"
+    },
+    "befreei":
+    {
+        "repo": "https://github.com/BeFreeI/Caesar-cipher-CLI-tool/tree/caezarCipher",
+        "branch": "master"
+    },
+    "belastotski":
+    {
+        "repo": "https://github.com/Belastotski/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "bellamy9678":
+    {
+        "repo": "https://github.com/bellamy9678/caesar-cipher-cli-tool",
+        "branch": "caesar-tool"
+    },
+    "besovadevka":
+    {
+        "repo": "https://github.com/besovadevka/besovadevka-basic-nodejs-2021Q2",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "bespalava":
+    {
+        "repo": "https://github.com/Bespalava/Caesar-cipher-CLI-tool",
+        "branch": "Caesar-cipher"
+    },
+    "blackymax":
+    {
+        "repo": "https://github.com/blackymax/caesar-cipher-node.js",
+        "branch": "caesar-cipher"
+    },
+    "blari":
+    {
+        "repo": "https://github.com/Blari/rsschool-tasks",
+        "branch": "Task_1_Caesar_cipher_CLI_tool"
+    },
+    "blazarqso":
+    {
+        "repo": "https://github.com/BlazarQSO/NodeJS-Caesar-CLI",
+        "branch": "Caesar-cipher-CLI-tool"
+    },
+    "boomchakachaka":
+    {
+        "repo": "https://github.com/boomchakachaka/nodejs-tasks",
+        "branch": "task-01/Caesar-cipher-CLI-tool"
+    },
+    "borisov-ivan-2k1":
+    {
+        "repo": "https://github.com/borisov-ivan-2k1/caesarCipher",
+        "branch": "task_1"
+    },
+    "borodichalex":
+    {
+        "repo": "https://github.com/borodichAlex/RSS_NODE_JS",
+        "branch": "task-1_caesar-cipher-CLI-tool"
+    },
+    "bottleneckpc":
+    {
+        "repo": "https://github.com/BottleneckPC/Caesar-cipher-CLI-tool",
+        "branch": "cli-tool"
+    },
+    "braumwinter":
+    {
+        "repo": "https://github.com/braumwinter/Caesar-cipher-CLI-tool",
+        "branch": "caesar_cipher_cli_tool"
+    },
+    "bskom":
+    {
+        "repo": "https://github.com/BSKOM/caesar-cipher-cli",
+        "branch": "caesar-cipher-cli"
+    },
+    "buianalex":
+    {
+        "repo": "https://github.com/BuianAlex/task1-caesar-cipher-cli-tool",
+        "branch": "dev"
+    },
+    "buiiz":
+    {
+        "repo": "https://github.com/buiiz/Caesar-cipher-CLI-tool",
+        "branch": "caesar-cipher"
+    },
+    "bukhashov":
+    {
+        "repo": "https://github.com/Bukhashov/RS-Nodejs/tree/Caesar-cipher-CLI",
+        "branch": "master"
+    },
+    "bulletxenus":
+    {
+        "repo": "https://github.com/bulletxenus/Caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "burik84":
+    {
+        "repo": "https://github.com/burik84/basic-nodejs-2021Q2",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "butterbrot777":
+    {
+        "repo": "https://github.com/ButterBrot777/node_js-task1",
+        "branch": "caesar"
+    },
+    "chaplygindenys":
+    {
+        "repo": "https://github.com/chaplygindenys/CaesarCodeCLI",
+        "branch": "dev"
+    },
+    "chexovpert":
+    {
+        "repo": "https://github.com/chexovpert/nodejs-rscourse-task1",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "choco-cat":
+    {
+        "repo": "https://github.com/choco-cat/rss-node-js",
+        "branch": "task1"
+    },
+    "ckiv":
+    {
+        "repo": "https://github.com/Ckiv/task-1-caesar-cipher-cli",
+        "branch": "caesar-cipher-cli-test"
+    },
+    "courtamour":
+    {
+        "repo": "https://github.com/courtamour/rs-task1",
+        "branch": "caesar-cli"
+    },
+    "cqxg":
+    {
+        "repo": "https://github.com/cqxg/Caesar-cipher-CLI-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "cup0ra":
+    {
+        "repo": "https://github.com/cup0ra/Caesar-cipher-CLI",
+        "branch": "caesar-cipher"
+    },
+    "damirel":
+    {
+        "repo": "https://github.com/damirel/caesar-cipher",
+        "branch": "caesar"
+    },
+    "daniyarseferov":
+    {
+        "repo": "https://github.com/DaniyarSeferov/nodejs-task-1-caesar-cipher-cli",
+        "branch": "caesar-cipher-cli"
+    },
+    "dansitnikov":
+    {
+        "repo": "https://github.com/DANSitNikov/node-task-one",
+        "branch": "develop"
+    },
+    "daricat":
+    {
+        "repo": "https://github.com/daricat/caesar-cipher-cli-tool",
+        "branch": "\u0441aesar-cipher-cli-tool"
+    },
+    "darkjedidj":
+    {
+        "repo": "https://github.com/DarkJediDJ/CLI-Caesar",
+        "branch": "CLI"
+    },
+    "daryaya":
+    {
+        "repo": "https://github.com/DaryaYa/caesar-cipher",
+        "branch": "develop"
+    },
+    "davidkasumov":
+    {
+        "repo": "https://github.com/davidKasumov/rs-cli",
+        "branch": "work"
+    },
+    "dehoko":
+    {
+        "repo": "https://github.com/DeHoKo/basic-nodejs-2021Q2-task1",
+        "branch": "task1/caesar-cipher-cli-tool"
+    },
+    "demanikys":
+    {
+        "repo": "https://github.com/Demanikys/node-js-task-1",
+        "branch": "Caesar-cipher-CLI-tool"
+    },
+    "denfurt":
+    {
+        "repo": "https://github.com/DEnFUrt/caesar_cipher_cli",
+        "branch": "development"
+    },
+    "denisafa":
+    {
+        "repo": "https://github.com/DenisAfa/caesar-cipher-CLI-tool",
+        "branch": "caesar-cipher-CLI-tool"
+    },
+    "denzel-commits":
+    {
+        "repo": "https://github.com/denzel-commits/nodejs-cli-tool",
+        "branch": "task1/caesar-cipher-cli-tool"
+    },
+    "dewwine":
+    {
+        "repo": "https://github.com/Dewwine/Caesar-cipher-CLI-tool",
+        "branch": "dev"
+    },
+    "dezreng":
+    {
+        "repo": "https://github.com/Dezreng/Task1-Caesar-cipher-CLI-tool/tree/caesar-cipher#task1-caesar-cipher-cli-tool",
+        "branch": "master"
+    },
+    "dimakukhta":
+    {
+        "repo": "https://github.com/DimaKukhta/caesar-cipher-cli",
+        "branch": "develop"
+    },
+    "dzianisbohush":
+    {
+        "repo": "https://github.com/dzianisbohush/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "dzmitrykavalenka-own":
+    {
+        "repo": "https://github.com/dzmitrykavalenka-own/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "eduardkorkuts":
+    {
+        "repo": "https://github.com/EduardKorkuts/rsNode",
+        "branch": "cli-tool"
+    },
+    "eductech":
+    {
+        "repo": "https://github.com/eductech/node-task-1",
+        "branch": "task-1"
+    },
+    "ellankz":
+    {
+        "repo": "https://github.com/ellankz/node-js-cli",
+        "branch": "cli-app"
+    },
+    "eugenekovgan":
+    {
+        "repo": "https://github.com/EugeneKovgan/nodejs-2021Q2",
+        "branch": "Task-1.-Caesar-cipher-CLI-tool"
+    },
+    "eugene-smirnov":
+    {
+        "repo": "https://github.com/Eugene-Smirnov/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "evanre":
+    {
+        "repo": "https://github.com/evanre/ceasar-cipher-cli",
+        "branch": "dev"
+    },
+    "evgenia-cyber":
+    {
+        "repo": "https://github.com/Evgenia-cyber/node-caesar-cli",
+        "branch": "develop"
+    },
+    "eyvgeniy":
+    {
+        "repo": "https://github.com/Eyvgeniy/rss-school-node2021q3",
+        "branch": "project/1-caesar-cipher"
+    },
+    "femiarkh":
+    {
+        "repo": "https://github.com/femiarkh/caesar-cipher-cli-tool",
+        "branch": "task01/caesar-cipher-cli-tool"
+    },
+    "fodin":
+    {
+        "repo": "https://github.com/Fodin/NodeJS",
+        "branch": "caesar-cipher"
+    },
+    "frenkiart":
+    {
+        "repo": "https://github.com/FrenkiArt/caesar-cipher",
+        "branch": "caeser-cipher"
+    },
+    "gabriellji":
+    {
+        "repo": "https://github.com/Gabriellji/caesar-cipher",
+        "branch": "cli-tool"
+    },
+    "gaziz666":
+    {
+        "repo": "https://github.com/Gaziz666/Caesar-cipher-CLI-tool-2",
+        "branch": "master"
+    },
+    "georgetuz":
+    {
+        "repo": "https://github.com/GeorgeTuz/NodeJS-RSSchool",
+        "branch": "task1_caesar-cipher-cli-tool"
+    },
+    "glebovanton":
+    {
+        "repo": "https://github.com/glebovanton/caesar-cipher-cli-tool",
+        "branch": "task/create-cli-tool"
+    },
+    "gmazur92":
+    {
+        "repo": "https://github.com/gmazur92/caesars-cipher-app",
+        "branch": "caesars-cipher-task"
+    },
+    "goonext":
+    {
+        "repo": "https://github.com/GooNext/Caesar-cipher-CLI-RS-",
+        "branch": "develop"
+    },
+    "grerin":
+    {
+        "repo": "https://github.com/GreRin/task1-caesar-cipher-cli-tool",
+        "branch": "task1-caesar-cipher-cli-tool"
+    },
+    "grigory-m":
+    {
+        "repo": "https://github.com/Grigory-m/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "gudoshin":
+    {
+        "repo": "https://github.com/gudoshin/task1",
+        "branch": "new_branch"
+    },
+    "guest363":
+    {
+        "repo": "https://github.com/guest363/NODEJS2021Q2",
+        "branch": "task-1_caesar_cipher_cli"
+    },
+    "hallovarvara":
+    {
+        "repo": "https://github.com/hallovarvara/caesar-cipher-cli",
+        "branch": "caesar-cipher-cli-task"
+    },
+    "hardzeichyksiarhei":
+    {
+        "repo": "https://github.com/hardzeichyksiarhei/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "helias17":
+    {
+        "repo": "https://github.com/Helias17/nodejs-2021-q2",
+        "branch": "caesar-cipher"
+    },
+    "hellobro89":
+    {
+        "repo": "https://github.com/HelloBro89/RS_School_Caesar_task",
+        "branch": "Caesar_task"
+    },
+    "hellsingi":
+    {
+        "repo": "https://github.com/Hellsingi/CLI-tool",
+        "branch": "Caesar_cipher_cli"
+    },
+    "hidemydreams":
+    {
+        "repo": "https://github.com/hidemydreams/basic-nodejs-2021Q2",
+        "branch": "caesar-cipher"
+    },
+    "hirontez":
+    {
+        "repo": "https://github.com/HironTez/Cesar-cipher",
+        "branch": "cesar-cipher"
+    },
+    "holub-alexander":
+    {
+        "repo": "https://github.com/holub-alexander/rs-caesar-cli",
+        "branch": "caesar-cli"
+    },
+    "igoraleks88":
+    {
+        "repo": "https://github.com/IgorAleks88/caesar-cipher-cli",
+        "branch": "develop"
+    },
+    "ilitalex":
+    {
+        "repo": "https://github.com/ilitAlex/Rsschool-q2-22021",
+        "branch": "caesar"
+    },
+    "ilyakozak":
+    {
+        "repo": "https://github.com/IlyaKozak/nodejs-rsschool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "ilyanaumenko-github":
+    {
+        "repo": "https://github.com/ilyanaumenko-github/nodejs-course-caesar-cipher",
+        "branch": "caesar-cipher"
+    },
+    "inq666":
+    {
+        "repo": "https://github.com/inq666/Caesar-cipher-CLI-tool",
+        "branch": "develop"
+    },
+    "irinakorbut":
+    {
+        "repo": "https://github.com/IrinaKorbut/node-js",
+        "branch": "task1/caesar-cipher-cli-tool"
+    },
+    "johnneon":
+    {
+        "repo": "https://github.com/johnneon/caesar-cipher-cli",
+        "branch": "develop"
+    },
+    "juliagvozdeva":
+    {
+        "repo": "https://github.com/JuliaGvozdeva/caesar-ciper",
+        "branch": "develop"
+    },
+    "kalinkinfiz":
+    {
+        "repo": "https://github.com/KalinkinFiz/nodejs-2021Q2-task1",
+        "branch": "caesar_cipher_CLI_tool"
+    },
+    "katkopikat":
+    {
+        "repo": "https://github.com/katkopikat/Caesar-cipher-CLI-tool",
+        "branch": "caesar-cli"
+    },
+    "kingstontwelve":
+    {
+        "repo": "https://github.com/KingstonTwelve/task-1-Caesar-cipher-CLI-tool",
+        "branch": "develop"
+    },
+    "kkasya":
+    {
+        "repo": "https://github.com/Kkasya/caesar-cipher",
+        "branch": "develop"
+    },
+    "kli2m":
+    {
+        "repo": "https://github.com/kli2m/CaesarCipherCLI",
+        "branch": "master"
+    },
+    "komalapa":
+    {
+        "repo": "https://github.com/komalapa/rs-school",
+        "branch": "task1-caesar"
+    },
+    "krumiprog":
+    {
+        "repo": "https://github.com/krumiprog/task1_ceasar-cipher-cli-tool",
+        "branch": "dev"
+    },
+    "kulgeyko93":
+    {
+        "repo": "https://github.com/Kulgeyko93/Caesar-cipher-CLI",
+        "branch": "develop"
+    },
+    "kusakinvova":
+    {
+        "repo": "https://github.com/KusakinVova/RS-T1-Caesar-cipher-CLI",
+        "branch": "task1"
+    },
+    "kutsak-nataly":
+    {
+        "repo": "https://github.com/Kutsak-Nataly/nodejs-01",
+        "branch": "task1-Caesar"
+    },
+    "kvykhr":
+    {
+        "repo": "https://github.com/kvykhr/caesars-cipher-cli",
+        "branch": "task1"
+    },
+    "kyleshovbb":
+    {
+        "repo": "https://github.com/kyleshovbb/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "lehager":
+    {
+        "repo": "https://github.com/LehaGer/NodeJSTasks",
+        "branch": "Task1-ceaserCode"
+    },
+    "levendor":
+    {
+        "repo": "https://github.com/Levendor/caesar-cipher-CLI-tool",
+        "branch": "develop"
+    },
+    "lexsava":
+    {
+        "repo": "https://github.com/LexSava/NodeJS2021Q2-lexsava",
+        "branch": "caesar-cipher-task"
+    },
+    "lighthousekeeperyn":
+    {
+        "repo": "https://github.com/LighthouseKeeperYN/RSSchool-NodeJS-2021-Q2",
+        "branch": "01/caesar-cipher-cli-tool"
+    },
+    "liza-veis":
+    {
+        "repo": "https://github.com/Liza-Veis/caesar-cipher-cli",
+        "branch": "caesar-cipher"
+    },
+    "lue21":
+    {
+        "repo": "https://github.com/Lue21/caesar_cipher",
+        "branch": "caesar_cipher"
+    },
+    "m1kadoweb":
+    {
+        "repo": "https://github.com/m1kadoweb/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher"
+    },
+    "m1mik":
+    {
+        "repo": "https://github.com/m1mik/rs2021q2nodejs",
+        "branch": "caesar_cipher_cli"
+    },
+    "magklax":
+    {
+        "repo": "https://github.com/magklax/node-js",
+        "branch": "ceasar-ciper-cli-tool"
+    },
+    "magnusducatuslt":
+    {
+        "repo": "https://github.com/magnusducatuslt/rs_node_bizzare_adventure",
+        "branch": "feat/cli_cipher"
+    },
+    "magtesyan":
+    {
+        "repo": "https://github.com/magtesyan/rc-node",
+        "branch": "task1-caesar-cipher"
+    },
+    "mahtishavaev":
+    {
+        "repo": "https://github.com/mahtishavaev/caesar-cipher",
+        "branch": "caesar-cipher"
+    },
+    "makde":
+    {
+        "repo": "https://github.com/MakDe/task-1-caesar-cipher-cli",
+        "branch": "dev"
+    },
+    "maksimmaiboroda":
+    {
+        "repo": "https://github.com/maksimMaiboroda/task-1-caesar-cipher-tool",
+        "branch": "feature/create-caesar-cipher-tool"
+    },
+    "maksmir":
+    {
+        "repo": "https://github.com/Maksmir/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher"
+    },
+    "malagor":
+    {
+        "repo": "https://github.com/Malagor/nodejs-Caesar",
+        "branch": "dev"
+    },
+    "margaryta-maletz":
+    {
+        "repo": "https://github.com/Margaryta-Maletz/NodeJS-2021Q2",
+        "branch": "task1/caesar-cipher-CLI-tool"
+    },
+    "marina-poprotskaya":
+    {
+        "repo": "https://github.com/Marina-Poprotskaya/NodeJS-2021",
+        "branch": "task/Caesar_cipher-cli"
+    },
+    "marinatwice82":
+    {
+        "repo": "https://github.com/marinatwice82/caesar-cipher",
+        "branch": "caesar-cipher-cli"
+    },
+    "marioti95":
+    {
+        "repo": "https://github.com/marioti95/caesar-cli",
+        "branch": "caesar-cli-initial"
+    },
+    "mashnello":
+    {
+        "repo": "https://github.com/mashnello/caesar-cipher-cli",
+        "branch": "dev"
+    },
+    "maslovars":
+    {
+        "repo": "https://github.com/Maslovars/basic-nodejs-2021Q2-caesar-cipher-cli",
+        "branch": "caesar-cipher-cli"
+    },
+    "mauta":
+    {
+        "repo": "https://github.com/mauta/Caesar-cipher-CLI-tool",
+        "branch": "develop"
+    },
+    "me-am-i":
+    {
+        "repo": "https://github.com/me-am-i/caesar-cipher-cli",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "milanaadams":
+    {
+        "repo": "https://github.com/milanaadams/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher"
+    },
+    "mishadanilov":
+    {
+        "repo": "https://github.com/MishaDanilov/Caesar-cipher",
+        "branch": "CaesarCipher"
+    },
+    "mishafuod-13":
+    {
+        "repo": "https://github.com/mishafuod-13/caesar_CLI_tool",
+        "branch": "task1/caesar_CLI_tool"
+    },
+    "mme83":
+    {
+        "repo": "https://github.com/MME83/caesar-cipher-cli-tool",
+        "branch": "task1-caesar-cipher-cli-tool"
+    },
+    "moraviin":
+    {
+        "repo": "https://github.com/Moraviin/rss-node-2021q2",
+        "branch": "task/caesar"
+    },
+    "moriel569":
+    {
+        "repo": "https://github.com/moriel569/Caesar-cipher-CLI-Tool",
+        "branch": "caesar-ciper-cli-solution"
+    },
+    "morzhalopavel":
+    {
+        "repo": "https://github.com/MorzhaloPavel/Task1-CipherCaersar",
+        "branch": "task1"
+    },
+    "mrslecter":
+    {
+        "repo": "https://github.com/MrsLecter/Caesar-cipher-CLI-tool/tree/solve",
+        "branch": "master"
+    },
+    "muratx10":
+    {
+        "repo": "https://github.com/muratx10/nodejs-2021Q2",
+        "branch": "cipher-caesar"
+    },
+    "nachinkashaurmi":
+    {
+        "repo": "https://github.com/NachinkaShaurmi/node-task1-caesar-cipher-cli",
+        "branch": "node-task1-caesar-cipher-cli"
+    },
+    "nastyatsimanovich97":
+    {
+        "repo": "https://github.com/NastyaTsimanovich97/CaesarCipher",
+        "branch": "create-caesar-cipher-cli"
+    },
+    "natalliak":
+    {
+        "repo": "https://github.com/NatalliaK/CaesarCipherCLI",
+        "branch": "task1"
+    },
+    "natein":
+    {
+        "repo": "https://github.com/natein/caesar-cli-2021",
+        "branch": "develop"
+    },
+    "nebelwerfert":
+    {
+        "repo": "https://github.com/NebelwerferT/caesar-cipher-cli-",
+        "branch": "caesar-cipher-CLI"
+    },
+    "nefrit-sterjen":
+    {
+        "repo": "https://github.com/nefrit-sterjen/task01",
+        "branch": "cesar_cipher"
+    },
+    "net-zen":
+    {
+        "repo": "https://github.com/Net-zen/Caesar-cipher-cli-tool",
+        "branch": "master"
+    },
+    "netzorro":
+    {
+        "repo": "https://github.com/NetZorro/caesar-cipher",
+        "branch": "caesar-cipher"
+    },
+    "nicolay-kr":
+    {
+        "repo": "https://github.com/Nicolay-kr/RSS-NodeJS",
+        "branch": "Caesar-cipher-CLI-tool"
+    },
+    "nikbel77":
+    {
+        "repo": "https://github.com/NikBel77/ceasar-cipher-cli",
+        "branch": "ceasar-cipher"
+    },
+    "nikersen":
+    {
+        "repo": "https://github.com/nikersen/rsschool-nodejs-2021Q2-task1",
+        "branch": "task1-caesar-cipher-cli"
+    },
+    "nilubisan":
+    {
+        "repo": "https://github.com/nilubisan/caesar-cipher-cli",
+        "branch": "caesar-cipher-cli"
+    },
+    "nimlu-bot":
+    {
+        "repo": "https://github.com/Nimlu-bot/Caesar-cipher-CLI",
+        "branch": "task1/Caesar-cipher-CLI"
+    },
+    "odil-abdulloyev":
+    {
+        "repo": "https://github.com/odil-abdulloyev/caesar-cipher-cli",
+        "branch": "develop"
+    },
+    "okrypets":
+    {
+        "repo": "https://github.com/okrypets/RSScholl_NodeJS",
+        "branch": "caesar_cipher_task1"
+    },
+    "oksana-de":
+    {
+        "repo": "https://github.com/Oksana-de/nodejs",
+        "branch": "ceaser-cipher"
+    },
+    "olegdrobot":
+    {
+        "repo": "https://github.com/olegdrobot/caesar-cipher",
+        "branch": "caesar-cipher-cli"
+    },
+    "olga1305":
+    {
+        "repo": "https://github.com/Olga1305/rsschool-nodejs-task1-caesar-cipher-cli",
+        "branch": "caesar-cipher-cli"
+    },
+    "ortsukh":
+    {
+        "repo": "https://github.com/Ortsukh/Caesar-cipher-CLI-tool",
+        "branch": "develop"
+    },
+    "ospas312":
+    {
+        "repo": "https://github.com/ospas312/caesar-cipher-cli-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "parfenenkovedit":
+    {
+        "repo": "https://github.com/ParfenenkovEdit/rss-node-js-2021q2",
+        "branch": "caesar-cipher"
+    },
+    "pavelasadchy":
+    {
+        "repo": "https://github.com/PavelAsadchy/NodeJS-RSS/tree/caesar-cipher/caesar-cipher",
+        "branch": "master"
+    },
+    "pavello91":
+    {
+        "repo": "https://github.com/pavello91/RSSchoolNodeJS",
+        "branch": "task1"
+    },
+    "peshchter":
+    {
+        "repo": "https://github.com/Peshchter/NodeJS_Lessons",
+        "branch": "Caesar_CLI_tool"
+    },
+    "petrgali":
+    {
+        "repo": "https://github.com/petrgali/Caesar-CLI-tool",
+        "branch": "Caesar-CLI-tool"
+    },
+    "progspectar":
+    {
+        "repo": "https://github.com/progspectar/caesar-cipher-cli",
+        "branch": "development"
+    },
+    "pryvvid":
+    {
+        "repo": "https://github.com/pryvvid/basic-nodejs-2021Q2",
+        "branch": "01-caesar-cipher-cli-tool"
+    },
+    "ramanmukhin":
+    {
+        "repo": "https://github.com/RamanMukhin/Caesar-cipher-CLI",
+        "branch": "Caesar_cipher_CLI_tool"
+    },
+    "ratomsky":
+    {
+        "repo": "https://github.com/ratomsky/nodejs-caesar-cipher",
+        "branch": "caesar-cipher"
+    },
+    "raualiaxyr":
+    {
+        "repo": "https://github.com/RauAliaxYr/Task1_caesar",
+        "branch": "task_caesar_develop"
+    },
+    "reagentjs":
+    {
+        "repo": "https://github.com/reagentjs/rss-nodejs",
+        "branch": "task-1-caesar-cipher"
+    },
+    "reazzy":
+    {
+        "repo": "https://github.com/ReaZzy/Caesar-cipher-CLI-tool",
+        "branch": "task1/Caesar-cipher-CLI-tool"
+    },
+    "recomagnesius":
+    {
+        "repo": "https://github.com/Recomagnesius/RSschool-NodeJs-2021Q2",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "rmxxtt":
+    {
+        "repo": "https://github.com/rmxxtt/Caesar",
+        "branch": "dev"
+    },
+    "roboticstechnology":
+    {
+        "repo": "https://github.com/roboticstechnology/rss_node_cli",
+        "branch": "cli"
+    },
+    "rajabovilyas":
+    {
+        "repo": "https://github.com/rolling-scopes-school/rajabovilyas-NODEJS2021Q2.git",
+        "branch": "master"
+    },
+    "romanalesenkov1":
+    {
+        "repo": "https://github.com/romanalesenkov1/caesar-cipher-cli-tool",
+        "branch": "feat/caesar-cipher-cli-tool"
+    },
+    "roman-oleynik":
+    {
+        "repo": "https://github.com/roman-oleynik/RomanOleynikRSSchoolNodeJS",
+        "branch": "caesar-cipher-cli"
+    },
+    "rombelik":
+    {
+        "repo": "https://github.com/rombelik/caesar",
+        "branch": "task-1"
+    },
+    "rybakouvlad":
+    {
+        "repo": "https://github.com/rybakouvlad/caesar-cli",
+        "branch": "develop"
+    },
+    "sabohat":
+    {
+        "repo": "https://github.com/sabohat/nodeJS-projects/tree/caesar-cipher-cli-tool",
+        "branch": "master"
+    },
+    "saneq1":
+    {
+        "repo": "https://github.com/saneq1/CaesarCipherCLI",
+        "branch": "develop"
+    },
+    "sapranovich":
+    {
+        "repo": "https://github.com/Sapranovich/RS-School-NodeJS-course",
+        "branch": "Task1"
+    },
+    "schuklinpavel":
+    {
+        "repo": "https://github.com/schuklinpavel/nodejs-2021Q2_Caesar-cipher-CLI-tool",
+        "branch": "feature/cipher"
+    },
+    "self067":
+    {
+        "repo": "https://github.com/self067/rss-nodejs-2021Q2-task1",
+        "branch": "task1"
+    },
+    "semigradsky":
+    {
+        "repo": "https://github.com/Semigradsky/rsschool-nodejs-caesar-cipher",
+        "branch": "task1/caesar-cipher"
+    },
+    "sergei404":
+    {
+        "repo": "https://github.com/sergei404/caeser_cipher",
+        "branch": "master"
+    },
+    "sergej-karyuhin":
+    {
+        "repo": "https://github.com/Sergej-Karyuhin/task1-caesar-cipher-cli",
+        "branch": "task-1"
+    },
+    "sergeypush":
+    {
+        "repo": "https://github.com/SergeyPush/rs_node",
+        "branch": "caesar_cypher"
+    },
+    "sergeyshabeko":
+    {
+        "repo": "https://github.com/sergeyShabeko/nodejs-course-2021",
+        "branch": "caesar-cipher-CLI-tool"
+    },
+    "sergeyshestak":
+    {
+        "repo": "https://github.com/sergeyshestak/Caesar-cipher-CLI-tool",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "sergeytestweb":
+    {
+        "repo": "https://github.com/sergeytestweb/Task_1_Caesar_cipher",
+        "branch": "task_1"
+    },
+    "shvetsby":
+    {
+        "repo": "https://github.com/ShvetsBy/caesar",
+        "branch": "develop"
+    },
+    "simbat1987":
+    {
+        "repo": "https://github.com/Simbat1987/caesar-cipher",
+        "branch": "develop"
+    },
+    "sixstringer91":
+    {
+        "repo": "https://github.com/SixStringer91/Caesar-cipher-CLI-tool",
+        "branch": "develop"
+    },
+    "skwinnik":
+    {
+        "repo": "https://github.com/skwinnik/ccipher",
+        "branch": "cipher"
+    },
+    "skyris":
+    {
+        "repo": "https://github.com/skyris/caesar-cipher-cli",
+        "branch": "task-solving"
+    },
+    "slavaider":
+    {
+        "repo": "https://github.com/slavaider/sifon",
+        "branch": "sifon"
+    },
+    "slobby":
+    {
+        "repo": "https://github.com/slobby/nodejs-2021Q2",
+        "branch": "task1"
+    },
+    "someqa":
+    {
+        "repo": "https://github.com/someqa/rs-node",
+        "branch": "task-1-caesar"
+    },
+    "spaceit":
+    {
+        "repo": "https://github.com/spaceIT/nodeJs_corse",
+        "branch": "crypt-module"
+    },
+    "spaceragga":
+    {
+        "repo": "https://github.com/spaceragga/task1-caesar-cipher-cli-tool",
+        "branch": "task1"
+    },
+    "spanb4":
+    {
+        "repo": "https://github.com/SpaNb4/Caesar-cipher-CLI-tool",
+        "branch": "caesar-cipher"
+    },
+    "spawnleon":
+    {
+        "repo": "https://github.com/SpawnLeon/rsschool-nodejs-caesar-cipher",
+        "branch": "task1/caesar-cipher"
+    },
+    "spiritforest":
+    {
+        "repo": "https://github.com/SpiritForest/NodeJS",
+        "branch": "task1-caesar-cipher-cli"
+    },
+    "spitai":
+    {
+        "repo": "https://github.com/spitaI/nodejs-rs-task1",
+        "branch": "cipher-cli"
+    },
+    "srr233":
+    {
+        "repo": "https://github.com/Srr233/task1-CLI-Tool",
+        "branch": "develop"
+    },
+    "ssamvelk":
+    {
+        "repo": "https://github.com/ssamvelk/Caesar_cipher",
+        "branch": "develop"
+    },
+    "stdmnstar":
+    {
+        "repo": "https://github.com/stdmnstar/RSS-NodeJS-Task1-Caesar-cipher-cli",
+        "branch": "develop"
+    },
+    "sulton-ali":
+    {
+        "repo": "https://github.com/Sulton-Ali/ceaser-cipher-cli-tool",
+        "branch": "ceaser-cipher-cli-tool"
+    },
+    "svetlana-tyshkevich":
+    {
+        "repo": "https://github.com/svetlana-tyshkevich/rss-node-caesar-cipher-cli-tool",
+        "branch": "task1-caesar-cipher-cli-tool"
+    },
+    "tanyanovik":
+    {
+        "repo": "https://github.com/TanyaNovik/caesar-cipher-cli",
+        "branch": "develop"
+    },
+    "tastypurgen":
+    {
+        "repo": "https://github.com/tastypurgen/caesar",
+        "branch": "caesar"
+    },
+    "tatsianaslapik":
+    {
+        "repo": "https://github.com/TatsianaSlapik/caesar-cipher-cli-tool",
+        "branch": "dev"
+    },
+    "temons":
+    {
+        "repo": "https://github.com/Temons/ceaser",
+        "branch": "develop"
+    },
+    "thipdev":
+    {
+        "repo": "https://github.com/Thipdev/rss-nodejs-1",
+        "branch": "task1caesar-cipher"
+    },
+    "thrvrce":
+    {
+        "repo": "https://github.com/thrvrce/caesar-cipher-cli-tool",
+        "branch": "develop"
+    },
+    "ticavin":
+    {
+        "repo": "https://github.com/ticavin/caesar_cipher_cli",
+        "branch": "cipherdev"
+    },
+    "tikenov":
+    {
+        "repo": "https://github.com/tikenov/rs-caesar-cipher",
+        "branch": "solution"
+    },
+    "timofei-benko":
+    {
+        "repo": "https://github.com/Timofei-Benko/caesar-cipher-cli",
+        "branch": "dev"
+    },
+    "timurkalimullin":
+    {
+        "repo": "https://github.com/timurkalimullin/2021-caesars-cipher",
+        "branch": "cipher"
+    },
+    "tsaminsk":
+    {
+        "repo": "https://github.com/tsaminsk/Ceasar_cipher_CLI_tool",
+        "branch": "dev"
+    },
+    "tv-dem":
+    {
+        "repo": "https://github.com/tv-dem/Caesar-cipher",
+        "branch": "master"
+    },
+    "twixy123":
+    {
+        "repo": "https://github.com/twixy123/caesar-cipher",
+        "branch": "caesar"
+    },
+    "uaolmer":
+    {
+        "repo": "https://github.com/uaolmer/caesar-cli",
+        "branch": "caesar-cipher"
+    },
+    "uporold":
+    {
+        "repo": "https://github.com/Uporold/RS-node-js",
+        "branch": "task1/caesar-cipher-cli"
+    },
+    "v0f":
+    {
+        "repo": "https://github.com/v0f/caesar-cli",
+        "branch": "develop"
+    },
+    "vachernyshov":
+    {
+        "repo": "https://github.com/VaChernyshov/task-1-caesar-cipher",
+        "branch": "task1-caesar-cipher-cli"
+    },
+    "vadavur":
+    {
+        "repo": "https://github.com/Vadavur/rs-s-node-js",
+        "branch": "caesar-cipher-cli-tool"
+    },
+    "valeriyuadev":
+    {
+        "repo": "https://github.com/valeriyuadev/task1",
+        "branch": "caesar-cipher"
+    },
+    "va-z":
+    {
+        "repo": "https://github.com/va-z/rss-caesar-cypher-cli",
+        "branch": "caesar-cypher"
+    },
+    "vepsar":
+    {
+        "repo": "https://github.com/Vepsar/casear-cipher",
+        "branch": "nodejs-caesar-cipher"
+    },
+    "vestryod":
+    {
+        "repo": "https://github.com/VestryOd/rs-nodejs-2021-q2",
+        "branch": "task01"
+    },
+    "victoriakam":
+    {
+        "repo": "https://github.com/VictoriaKam/Caesar-Cli",
+        "branch": "develop"
+    },
+    "viktoryia13":
+    {
+        "repo": "https://github.com/Viktoryia13/caesar_task",
+        "branch": "dev"
+    },
+    "vi-voe":
+    {
+        "repo": "https://github.com/vi-voe/caesar-cipher",
+        "branch": "caesar-cipher"
+    },
+    "vladdominator":
+    {
+        "repo": "https://github.com/vladdominator/cli-tool",
+        "branch": "Caesar-Cipher"
+    },
+    "vladi2909":
+    {
+        "repo": "https://github.com/vladi2909/nodejs-caesar-cipher",
+        "branch": "caesar-cipher"
+    },
+    "vladmeleshko":
+    {
+        "repo": "https://github.com/VladMeleshko/caesar-cipher-cli",
+        "branch": "caesar-cipher-cli-develop"
+    },
+    "vladmoskov":
+    {
+        "repo": "https://github.com/VladRassokhyn/caesar",
+        "branch": "task1-solution"
+    },
+    "vladrassokhyn":
+    {
+        "repo": "https://github.com/VladRassokhyn/caesar",
+        "branch": "task1-solution"
+    },
+    "vodichy":
+    {
+        "repo": "https://github.com/VodichY/caesar-chpher-cli",
+        "branch": "development"
+    },
+    "vorobeyandrey":
+    {
+        "repo": "https://github.com/vorobeyAndrey/node-courses",
+        "branch": "caesar-cipher"
+    },
+    "vsosevic":
+    {
+        "repo": "https://github.com/vsosevic/rs-nodejs",
+        "branch": "task1-caesar-cipher-cli"
+    },
+    "vvikota":
+    {
+        "repo": "https://github.com/vvikota/Caesar-cipher-CLI-tool",
+        "branch": "Caesar-cipher-CLI-tool"
+    },
+    "vzabavski":
+    {
+        "repo": "https://github.com/vzabavski/caesar-cipher-cli-tool",
+        "branch": "task1/caesar-cipher"
+    },
+    "webjsworker":
+    {
+        "repo": "https://github.com/webjsworker/Caesar-cipher-CLI-tool",
+        "branch": "Task_1_ready"
+    },
+    "webmakaka":
+    {
+        "repo": "https://github.com/webmak1/Rolling-Scopes-School-Nodejs-Course-Task-1-Caesar-cipher-CLI-tool",
+        "branch": "dev"
+    },
+    "wee-bee2019":
+    {
+        "repo": "https://github.com/Wee-Bee2019/task_1",
+        "branch": "Caesar-cipher-CLI-tool"
+    },
+    "wonderluc":
+    {
+        "repo": "https://github.com/WonderLuc/Caesar-cipher-CLI",
+        "branch": "ceasar-cipher-cli"
+    },
+    "x-creator":
+    {
+        "repo": "https://github.com/X-creator/Edon",
+        "branch": "caesar-cipher"
+    },
+    "xoxoji":
+    {
+        "repo": "https://github.com/XoXoJI/rs-school-nodejs-2021q2-task1",
+        "branch": "task1-caesar_cipher_cli_tool"
+    },
+    "ya6":
+    {
+        "repo": "https://github.com/ya6/nodejs-2021q2",
+        "branch": "cli-tool"
+    },
+    "yaroslav09":
+    {
+        "repo": "https://github.com/Yaroslav09/RSS_NodeJS_2021Q2",
+        "branch": "Task_1_Ceaser_cipher"
+    },
+    "yurayuchkavich":
+    {
+        "repo": "https://github.com/YuraYuchkavich/NodeJS",
+        "branch": "task-1-ceasar-chipher-cli"
+    },
+    "yurianisimov27":
+    {
+        "repo": "https://github.com/YuriAnisimov27/rss-nodejs",
+        "branch": "caesar_cipher"
+    },
+    "yuriysga":
+    {
+        "repo": "https://github.com/YuriySga/Caesar-cipher-CLI-tool",
+        "branch": "develop"
+    },
+    "yuskivpm":
+    {
+        "repo": "https://github.com/yuskivpm/rss-nodejs-q2",
+        "branch": "task1/caesar-cli-tool"
+    },
+    "zalart":
+    {
+        "repo": "https://github.com/Zalart/Caesar-cipher-CLI-tool",
+        "branch": "dev"
+    },
+    "zoldief":
+    {
+        "repo": "https://github.com/zoldief/caesar-cipher",
+        "branch": "caesar-cipher"
+    }
+}

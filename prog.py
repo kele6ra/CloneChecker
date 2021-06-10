@@ -37,6 +37,7 @@ LIMIT = config.getfloat('Settings', 'limit')
 BUNDLE_FILENAME = config.get('Settings', 'bundle_filename')
 TASK_NAME = config.get('Settings', 'task_name')
 CONCAT_PATTERN = config.get('Settings','concat_pattern')
+CSV_DELIMETER = config.get('Settings','csv_delimiter')
 
 def svgReplace(filename, links):
   with open(filename, 'r') as file:
@@ -167,7 +168,7 @@ def getUserTaskRepos(path, file_type):
   elif file_type == 2:
     repos = {}
     with open(path) as csv_file:
-      reader = csv.reader(csv_file, delimiter=';')
+      reader = csv.reader(csv_file, delimiter=CSV_DELIMETER)
       repos = {row[1]: {'repo': row[0], 'branch': 'master'} for row in reader}
 
     repoHandler = ParseRepoHandler(len(repos))

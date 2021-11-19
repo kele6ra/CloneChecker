@@ -1,5 +1,6 @@
 data/
 results/
+scores_old/
 results.csv
 crosscheck.txt
 graph.graphml

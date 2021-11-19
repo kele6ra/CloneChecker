@@ -55,8 +55,9 @@ def concat_files(dir_path, file_pattern):
     res = ''
 
     for path in Path(dir_path).rglob(file_pattern):
-      with open(path, "r", encoding='utf-8', errors='ignore') as infile:
-          res += infile.read()
+      if Path.is_file(path):
+        with open(path, "r", encoding='utf-8', errors='ignore') as infile:
+            res += infile.read()
     return res
 
 def concatenateAll(path, repos, taskName, pattern):
@@ -116,9 +117,13 @@ class ParseRepos:
         api_link = self.repo['repo'].replace('github.com', 'api.github.com/repos')
         api_link = api_link.replace('/pull/', '/pulls/')
         commits_str = api_link.find('/commits/')
+        files_str = api_link.find('/files/')
 
         if commits_str != -1:
           api_link = api_link[:commits_str]
+
+        if files_str != -1:
+          api_link = api_link[:files_str]
 
         try:
           request = Request(api_link)
@@ -130,6 +135,14 @@ class ParseRepos:
         except:
           print ('Could not find ', self.userName, '\'s repo')
           return False
+      elif '/tree' in self.repo['repo']:
+        self.repo['repo'] = self.repo['repo'][:self.repo['repo'].index('/tree')]
+        if '/tree/' in self.repo['repo']:
+          self.repo['branch'] = self.repo['repo'].split('/tree/', 1)[1]
+          if '/' in self.repo['branch']:
+            self.repo['branch'] = self.repo['branch'].split('/',1)[0]
+        else:
+          self.repo['branch'] = 'master'
       return self.isSuccess()
     else:
       return False  
